@@ -15,6 +15,10 @@ app.use(routes);
 
 app.use(errorHandler);
 
+app.get("/", async (req,res) => {
+    res.json({sucesss: true})
+})
+
 const PORT = process.env.PORT || 3000;
 
 connectDB()
